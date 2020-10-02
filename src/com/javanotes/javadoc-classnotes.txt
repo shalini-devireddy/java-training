@@ -1,0 +1,925 @@
+javadoc
+    it is a tool in JDK
+    follows same way as the java and javac commands
+
+while compiling java the file name can be case insenstive as windows is not case sensitive    
+
+app class (client class) and solution/server class.
+
+
+String 
+   A collections of characters
+   "abc"
+   "123"  -- String it is not a number (int, long, )
+
+
+For two objects or primitive types to be equal they have to satisfy
+two conditions
+   1. they have to be of the same data type
+   2. content of the variable has to be equal.
+
+
+Primitive types and Objects
+    they just have data
+    Objects have data and methods
+
+    String "Madhavi"
+      M a d h a v i
+      0 1 2 3 4 5 6 
+      10????
+      --- First character what is?    ---       M
+      --- how many characters in the String?    7
+      --- how to add another String to this?    "Madhavi Vinjamuri"
+      --- How to split it into multiple strings? "Ma"  "dhavi"   "mad" 'havi"'
+
+  Exception class   
+
+  04/17/2020
+     Inheritance
+        Pattern Classes
+     Exception
+     String    
+
+
+
+     Code ---- > new code
+     Java everything is a class
+
+     Class ----> Class
+
+     Parent Class ----> Child Class
+     Super Class ----> Sub Class
+
+
+     Mother1  Father   Mother2
+         |     |       |
+          --------------
+            |       | 
+          Child   Child2
+
+   Java has only single inheritance
+
+      parent ----------  Child          
+                |
+                 ------- Child
+
+
+      StarPattern    ------------- StarNumberPattern   ---------   Patterns
+   prints star pattern          prints Number Pattern            Number pyramid & star Pyramid
+
+   ///   protected 
+     Access Qualifiers class/variable/method
+       public    --- every body
+       private   --- nobody except inside the class
+       protected --- only children and their children
+       <<default>>  --- only package 
+
+   /// getters and setters
+
+   /// this keyword
+
+   /// super keyword
+
+   /// return keyword
+
+   /// Method overload 
+
+
+   public void printStarPyramid(int noOfLines){
+   public void printStarPyramid(){
+   public int printStarPyramid(){
+   public void printStarPyramid(int noOfLines, int secondNoOfLines)
+
+   /// anatomy of the method  ---  signature
+   <<access_qualifier>> <<return_type>> methodName(<<parameter1>>, <<parameter2>>, ....)
+
+
+   a class becomes abstract when if a method or varible inside it is defined as abstract.
+
+
+   Super Class --------->    sub class
+     Animal    --------->     Dog 
+
+
+   Method Overriding
+     When sub class rewrites a method/variable in Super class.     
+
+
+     Parent ------ subclass1 -----   subclass2
+
+     Parent ------------> Subclass1
+           |
+            ------------> Subclass2
+
+ //// abstract key word
+         abstract classes cannot be created.
+
+ /// anatomy of object creation
+       Dog aDog = new Dog();
+    <<class_name>>  <<<Reference variable name>>> = new <<classname>>(); 
+    
+    Computer memory  --- 8GB
+    -------------
+    | 4 GB       |
+    |------------|
+    |1GB |       |
+     ------------
+
+        1GB
+     --------------
+     | Dog    aDog |
+     |------       |     1Gb = 1000KB
+     | n,t  |      |      850MB --- noflegs
+     | meth |      |      851MB ---- hasTail
+     |-------  --- |      852 --- says()
+     |        |950||
+     |         --- |     750
+     --------------      anAnimal = 
+
+
+      Dog firstDog = new Dog():     1KB
+      Dog secondDog = new Dog();    1KB
+      Dog thirdDog = new Dog();     1KB
+
+      int i =5;
+
+     aDog contain a "reference" to the Dog object 
+
+     /// any super class reference can point to its subclass
+
+
+  ////   Polymorphism 
+
+
+  //// Exception class
+
+
+  /// anatomy of the method --- second revise
+   <<access_qualifier>> <<return_type>> methodName(<<parameter1>>, <<parameter2>>, ....) throws <<exceptions given>>
+
+ /// scope ---
+      the visibility (whether I can use the variable or not) is within the blocks
+      blocks are anything that is inside a open curly brace and a closed curly brace
+      {
+
+
+      }
+
+  /// use both the exceptions classse
+  /// use my code to get the second class
+
+  java -cp bin com.apps.MonthFinderApp
+  January
+  This is not a valid month number
+  This is not even a number
+
+                             SuperPatterns  --- Parent class
+                                  |
+   trianglePattern(int noOfLines)                      pyramidPattern(int noOfLines)
+   trianglePattern(String design, int noOfLines)       pyramidPattern(String design, int noOfLines)   
+                                  |
+                                  |
+        ------------------------------------------
+        |                                        |
+    NumberPattern                           StringPattern
+      printTriangle(String)                printTriangle(String, int)
+      printPyramid(String)                 printPyramid(String, int)
+     throws NotEvenANumber                   NotAStringPattern
+
+ 
+   int length;                                               something
+   String design = "*";
+   length = design.length();
+
+   design = "$";
+   length = design.length();
+   design = "someString";
+   length = design.length();
+
+
+   Animal                                          Vehicles
+       |                                                 |
+       |--------     Dog             Bus  ---------------|
+       |                                                 |
+       |--------     Cat             Bike ---------------|  --- isPatable()
+       | 
+       |--------     Cow    --- no
+       |
+       |--------     Human  --- no
+
+       Pet object 
+         isPetable();
+
+    Interface --- Pet 
+
+===    Inheritance
+       Polymorphism
+       Method overloading
+       Method overriding
+       Abstraction
+           class object ---   methods/attributes
+       Encapsulation
+           class objects 
+
+   In Java everything is Object
+
+
+   Object class    by default will extend it.
+     |
+     |
+     |
+   Animal       public class Animal extends Object{
+                   protected int noOfLges;
+                   protected int hasTail;
+                   public void says(){
+
+                   }
+                 }
+                 public class Dog extends Animal{
+
+                 }
+Object
+     equals(anotherObject)                 
+
+     public boolean equals(anotherObject)
+
+Vehicle class  --- color
+   |      |        --------  classess  templates --- cookie cutter
+ Bus     Bike
+
+///    objects  --- coookies                 WhiteBus.equals(WhiteBike)
+           WhiteBus
+           BlackBus                      overirde equals  ---   if it is a bus and color is same then only return true
+
+           WhiteBike
+           BlackBike
+
+    Vehicle busVehcileWhite = new Bus();
+    Vehicle busVehcileBlack = new Bus()
+
+Object is a special type of class. Its speciality is, it is mother of all Obejcts    
+
+String   set of character strings
+
+    "skjfksdhfsdhhs"
+
+    other objects if we want to create?
+   <<object_name>> variablechosen = new <<obejct_name>>();
+
+      String someRandomString = "asjdashdasa";   ---- first way of creating String
+
+      String anotherString = new String("asjdashdasa");  --- second way of creating string
+      public void printPattern(String design, int noOfLines)
+
+      <<obejct-name>> <<variable-name>> =  new <<Obeject-name>>();
+
+      same name as the class name....
+      every class will have a method whose name is same as the class name
+
+      PrintPattern
+         ---   public void printNumber(int noOfLines)
+               public void printNumber(String design, int noOfLines)
+               public void printStar(int noOflInes)
+               public void printStar(String design, int noOfLines)
+               public PrintPattern()
+               ---  public ,,,  PrintPattern(int noOflines)
+
+this mthod is called "Constructor"   --- this method will create the object. thats why you are using with new key word while creating a object.
+
+  I can overload the constructor method
+
+Exercise for tomorrow
+    instead of passing nof oflines you want to print
+    create a object with default noOflines so that that obejct will always print same no lines
+
+
+    StarPattern{
+      
+      int noOfLines;
+
+      public StarPattern(int linesWanted){
+          super();
+          this.noOfLines =  linesWanted;
+
+      }
+
+      printPattern(){
+
+        for int(i=0;i< this.noOflines)
+      }
+
+    }
+
+
+====   app class
+
+     StarPattern fiveLinesPattern =  new StarPattern(5);
+        fiveLinePattern.printPattern();
+
+
+StarPattern tenLinesPattern =  new StarPattern(10);
+        tenLinePattern.printPattern();   
+
+
+        What is a class, Object and reference
+                Dog is the class and firstDog, secondDog, thirdDog   are objects
+      an object is an instance of a class.
+      each object can be accessed by a reference to that object which we call as variable/variabele name
+
+       What is an interface      
+      
+  String 
+         parseInt   --- String "1234"
+           throw NumberFormatException
+         compareTo  --- ascii number diff  
+         equals     --- 
+
+          "One Cloud Java Training" 
+           12345678901234567890123  
+                   23
+
+  String myString = new String("One Cloud Java Training"); 
+         myString = "One Cloud Java Training";
+
+  int lengthOfString = myString.length();   
+
+  char aCharacter = myString.charAt(9);
+  System.out.println("The character at 9 position is: "+aCharacter);
+
+          
+
+   String firstString = " One Cloud Java Training ";
+   String secondString ="one cloud java training";
+   String thirdString = "";
+
+   int differenceOfString = firstString.compareTo(secondString);
+   if(differenceOfString==0)
+      sysout -- they are equal
+   if(diff >0)
+     Madhavi Shalini
+
+int differenceOfString = firstString.compareToIgnoreCase(secondString);     
+
+      String combinedString  = firstString.concat(secondString);
+              "One Cloud Java Trainingone cloud java training"
+
+      boolean isEqual =  firstString.equalsIgnoreCase(secondString) 
+       sysout isEqual  --- true
+
+    false     = firstString.isEmpty();
+
+    replaceAll("i", "t")
+    "One Cloud Java Training"
+    "One Cloue Java Tratntng"
+   
+   toUppercase(firstString)
+      ONE CLOUD JAVA TRAINING
+   toLowercase(first)   
+
+   04-27-2020  ==== exercise
+ 1. class with private variable 
+     but with public getters and setters
+
+ 2. Complete the Interface example      
+ 3. String method practice
+       Solution class will have one method
+         StringExamples  ----    demoStringMethods()
+         StringExamplesApp  ---- call demoMethos
+
+
+About to demo String compareTo
+First String:
+Second String: 
+compare to result is:
+Done demo String compare
+
+About to start String length 
+First string:
+length of this String :
+Done demo String length
+
+Wrapper classes
+
+    primitive types int, short, long, float, double, boolean, char, byte
+
+    int someInteger = 5;
+    boolean someBoolean = false;
+
+    someInteger.fly();
+
+    class   {
+
+       varaibles;
+       int noOflegs
+
+       methods
+       fly()
+       layEgg()
+       sing
+    }
+
+    Bird aBird = new Bird();
+    aBird.noOflegs
+    aBird.fly
+
+
+class Integer{
+   
+   int valueOfin;
+
+   // methods
+   
+
+}
+
+
+---- what is stacktrace
+---- how to know what exceptions the method throws from java doc
+---- how to handle those exceptions
+
+    Integer, Long, Double, Float, Boolean
+       compareTo
+       xxxValue()
+       toString()
+
+Arrays  -----
+     anArrayOfString
+      -------------------------------------------------------
+      |5 | 23 |  58 | 15  |  79  |  112 | 57  | 6  | 89  |  151  |
+      -------------------------------------------------------
+        0   1    2    3      4    5    6     7    8     9     
+
+Exercise : Find max number in the array
+
+Exercise: Find least number in the array
+
+Exercise: Split the String into parts
+            
+        URL: http://www.onecloud.com/autotools
+        <<protocol>>://<<domainName>>/<<pathName>
+
+        http://192.168.1.141:10080/autotools
+        <<protocol>>://<<ipadress>>:<<portNumber>>/<<pathname>>
+
+   protocol http
+   domainName www.oencloud.com
+   path autotools
+
+
+   protocl is http
+   ipaddress is 192.168.1.141
+   port number is 10080
+   path is autotools
+
+   class URLStringParser
+
+    URLFormatObject parseURL(String url) throws InvalidURLFormat
+
+   
+   String url = "http://www.onecloud.com/autotools";
+
+    String [] splits  = url.split("/");
+    splits.length = 4
+
+    splits[0] = http:
+    splits[1] = ""
+    splits[2] = www.onecloud.com
+    splits[3] = autotools
+
+
+               http://192.168.1.141:10080/autotools
+                
+                http:
+                ""
+                192.168.1.141:10080
+                autotools
+
+     class URLFormatObject{
+       
+       String protocol;
+       String domainName;
+       String ipAddress;
+       String portnumber;
+       String path
+
+       /// getters and setters
+
+
+     }
+
+
+     1. invlaid format
+     2. correct format
+           domain
+           ipadrre port
+
+
+Exercise : palindrome     MALAYALAM
+                          ABBA
+
+           reverse
+
+            try for Long, Float, Double, Boolean by passing int to Constructor
+
+
+Integrated Development Environment. (IDE)
+     ---  Eclipse  --- Java
+     ---  NetBeans --- Java 
+
+     <<<  IntelliJ --- J -- java  >>>
+
+     ---  PyCharm ---- especially for Python
+     ---  GoLand  --- especially Go language
+      ---  Microsoft Visual Studio --- C++/.NET
+
+
+What is anti-virus? how it works?.
+
+
+Top bar is called "Menu Bar"      
+
+Section are panes
+
+Compilation is also called "building the project" of there are lot of classes
+
+Configuration files
+
+IDE --- debugger
+
+   Intrepreter
+       Windows  --- batch files .bat  --- windows run (no compilation)
+       Unix     --- shell scripts .sh  .bash
+
+ctrl+Shift+N   --- search window
+Scroll to Source
+ctrl+/     ----   comments line selected
+
+
+  Bean or data object --- java bean.
+
+  Solution class ----------------------> app class
+                   sends java bean
+
+ctrl + hover over the name of the class
+
+
+   Solution Patterns                    
+       Seperation of concerns
+
+Types of Java Variables
+
+   Inside the method are method variables
+   the variables that belong to entire class are called class variables 
+
+   the third type of variables which define constants are called Static variables
+
+   static
+   final      
+
+   Exercise: class that you already saw String, wrapper classs 
+     static methods, static variables
+
+   Exercise:  Find a number in an Array
+
+    int [] aIntegerArray = {5, 90, 45, 34, 59, 60}  
+                            0   1  2    3   4   5
+    tc1 : "somthing"   --- NotEvenANumber exception
+    tc2 : 75           --- CannotFindNumber exception
+    tc3 : 34           --- 3
+
+    public int findNumberInArray(String number) throws NotEvenANumber, CannotFindNumber
+
+    Exercise:  reverse the numbers in the array
+
+    int [] aIntegerArray = {5, 90, 45, 34, 59, 60}
+    int [] reverseArray = {60, 59, 34, 45, 90, 5}
+
+      public void showNumbersInArray(){
+            
+            for(in i=0;i<aIntegerArray.length;i++){
+              System.out.println("The value in "+i+" place is: "+aIntegerArray[i]);
+            }
+      }
+
+  Exercise: implement Stack
+      stack of books?
+
+      Xth Class maths
+         bhagavgita
+        Ramayan
+      Java book
+
+        FILO --- first in and last out
+
+  class {
+    
+    // class variable 
+    // int array of 10   String [] stackOfBooks;
+    int counter;
+
+          0        1   2   3  4   5   6  7  8  9
+        javabook  rama 
+     push 
+          stackOfBooks[index] = "javaBook";
+          counter ++;
+
+     pop
+    
+
+  }    
+
+
+  App class{
+
+      sol.push("javaBook") thorws cannotPush;   
+
+      String bookName = sol.pop() cannotPoP ;
+}
+
+
+   stack --- implementation ---   limited, unlimited
+   queue --  implementation ---   limited, unlimited
+
+   
+public interface DataStructure{
+
+   public void add(String itemTobeAdded) cannotAddException;
+   public String remove() cannotRemoveException;
+   public void showDataStructure();
+}
+
+
+   DataStructure aDataStructure = new Stack();
+
+     aDataStructure.add();
+
+     aDataStructure.remove();
+
+        aDataStructure = new Queue();
+
+
+Algorithms ---
+      Searching
+      Sorting
+
+ Search program
+      int []  -- findNumber  
+
+  Binary search ---    8
+
+     --------------------------------------------------------
+     | 4 | 9 | 12  |  15  | 19   |  23  |  25  |  31  | 34  |
+     -------------------------------------------------------        
+        
+      0   1    2      3      4      5      6       7      8
+
+     9/2 == 4.5  4th
+
+     4/2  == 2
+
+     2/2  == 1
+     1/2  ==  1
+     1/2  ==  1
+
+     100
+
+0+100/2   = 50
+
+
+0+50/2   ==  25
+
+0+25/2   == 12
+
+0+12/ 2   === 6
+
+0+6/ 2 === 3
+
+
+0+3/ 2   == 1
+
+0+1/2  ==  1
+
+
+
+1. a number that is not there 
+    -- a number that is lower than the least number      ----  1
+    -- a number that is greater than the highest number  ----  38
+    -- a number that is in between the least and highest ----  17
+
+2. a number that is present
+    ---  it is the first number in the array    ---   4
+    ---  it is the last number in the array     ---  34
+    ---  it is some where in the middle  --    23    
+
+3. 6 test cases have two conditions
+    ---   the total number of elements are even
+    ---   the total number of elements are odd.    
+
+Sorting
+  
+      5, 7, 19, 26, 38
+
+      int [] sortedArray = new sortedArray[5];
+
+      findlowest(int []){
+
+      }
+
+
+    bubble Sort
+
+      38   19   19   19   19   19
+      19   38   26   26   26   26
+      26   26   38    7    7    7      6 times
+      7     7    7   38   14   14
+      14   14   14   14   38    9
+      9     9    9    9    9   38
+
+      19   19   19   19   19
+      26   26   7     7    7
+      7     7   26   14   14           5 times
+      14   14   14   26    9
+      9    9     9    9   26
+      38    38   38   38   38 
+
+      19    7   7     7
+      7    19   14    14
+      14   14   19    9                4 times
+      9    9     9    19
+      26   26    26   26
+      38   38    38   38
+
+    
+      7    7     7
+      14   14    9                     3 times
+      9    9     14
+      19   19    19
+      26   26    26
+      38   38    38
+
+      7     7
+      9     9
+      14    14                          2 times
+      19    19
+      26    26
+      38    38
+
+      7
+      9
+      14                                1 times
+      19
+      26
+      38
+
+
+      Exercise:
+         Sort an array using bubble sort algorithm.
+
+
+   Find few more searching and sorting algorithms.  
+
+
+   Keyboard and mouse
+      logitech k270, 320
+
+Exercise: 
+
+   1. AdvancedMonthFinder
+         String [] = {"January", February, ... Decem};
+
+       findMonth --- String input and String output.
+         NotAValidNumber
+         NotEvenANumber
+
+       based on the number you have the search in the array.
+       
+   2. Interface DataStructures
+        {
+           add     --- cannotAdd
+           remove  --- CannotRemove
+           show    --- will show contents of DataStructure
+        }      
+       DataStructure
+           Stack  implements DataStructure
+           Queue  implements Data
+
+    App
+        DataStructure stackDS = new Stack();
+
+        DataStructure queueDS = new Queue();  
+
+
+File handling:     
+
+    csv file
+  
+     File object
+     Path object
+  -----           input stream
+  |     | --------------------------------
+  | File| - - - -- -Sivareddy - - - - - --    ----->   data
+  ------- ------------------------------    <-----   data     
+         - - - - - - - - - - - -- - - 
+                output stream
+
+   Buffer --- delay
+   cache
+      File aFile = new File("C:\Users\HariPemReddy\shalini\sample.csv")
+
+      String aString = "SivaReddy";   25 bytes
+                                     10000000 bytes
+
+      Stream Object
+
+      The data stays in the input buffer fr a little bit before it comes to the program
+      The data stays in the output buffer for a little bit before it writes in the file
+
+  Apache Open source 
+      File handling apache commons io   --- classes 
+
+    ------------------------------
+    |_ref___|---->                          |
+    |    ------------------      |
+    |    | 4  | true | hfh|      |
+    ------------------------
+
+   
+
+-- inheritance
+      sub typing
+
+-- casting
+
+-- genrics
+
+-- Collections
+
+       Collection            Map
+          |
+  Set  list queue dequeue   
+
+Object comparison
+    equals, hashcode
+
+Object ordering
+
+
+  DataStructures == Collections
+
+     Stack -----    books, Strings, int, Objects
+     Queue
+
+Collections are group of objects and based on arrangement we give it a name.
+
+Collection Interface
+
+  {
+    add
+    remove
+    addAll
+    removeAll
+    contains
+    clear
+    isEmpty
+    iterator  (like show)
+    size
+    toArray
+  }
+
+  Set
+     --- unordered collection of objects
+     --- there are no duplicates
+
+     {Siva   Madhavi    Shalini}
+
+  List
+     --- ordered collection
+     --- duplicates
+
+     1    -  2      - 3        -   4    -   5       
+     Siva   Shalini   Madhavi     Siva    Shalini
+
+  Queue
+     FIFO
+
+  DeQueu
+     FIFO  LIFO    
+
+Map 
+   Key, value
+
+Exercise:
+
+   1. create Set, List, Queue, Dequeu and Map
+   2. try add, remove, iterator on all the list
+   3. in Set check that you cannot add duplicates
+   4. in List check that you can have duplicates
+   5. try addAll, removeAll, isEmpty, clear and contains 
+
+  SetExample solution
+      instance will be the collections
+  SetExampleApp 
+      demo all the methods   
+
+     
+

@@ -1,0 +1,19 @@
+javadoc
+    it is a tool in JDK
+    follows same way as the java and javac commands
+
+while compiling java the file name can be case insenstive as windows is not case sensitive    
+
+app class (client class) and solution/server class.
+
+
+String 
+   A collections of characters
+   "abc"
+   "123"  -- String it is not a number (int, long, )
+
+
+For two objects or primitive types to be equal they have to satisfy
+two conditions
+   1. they have to be of the same data type
+   2. content of the variable has to be equal.   
